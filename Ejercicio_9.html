@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+    <style>
+        #boton {
+            position: fixed; 
+            bottom: 10px;   
+            left: 10px;      
+            display: none;    
+            padding: 10px;
+            background: lightblue;
+            border: 1px solid #333;
+        }
+        body {
+            height: 200vh; 
+        }
+    </style>
+</head>
+<body>
+    Primera linea o cabecera
+    <div id="boton">Botón</div>
+
+    <script>
+        const boton = document.getElementById("boton");
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 0) {
+                boton.style.display = "block";
+            } else {
+                boton.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

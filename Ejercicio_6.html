@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+<label>Coordenada X</label>
+<input id="cX">
+<br>
+<label>Coordenada Y</label>
+<input id="cY">
+
+<script>
+    document.onmousemove = function(event) {
+        document.getElementById("cX").value = event.screenX;
+        document.getElementById("cY").value = event.screenY;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+    <style>
+        div { 
+            width: 200px; 
+            height: 200px; 
+            margin: 5px; 
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="c1" style="background: red"></div>
+    <div id="c2" style="background: white"></div>
+    <div id="c3" style="background: blue"></div>
+
+    <script>
+        const c1 = document.getElementById("c1");
+        const c2 = document.getElementById("c2");
+        const c3 = document.getElementById("c3");
+
+        c2.addEventListener("mouseenter", function(event) {
+            const from = event.relatedTarget;
+            if (from === c1) {
+                c2.style.background = "red";
+            } else if (from === c3) {
+                c2.style.background = "blue";
+            } else {
+                c2.style.background = "white";
+            }
+        });
+
+        c2.addEventListener("mouseleave", function() {
+            c2.style.background = "white";
+        });
+    </script>
+
+</body>
+</html>
+
+
+
